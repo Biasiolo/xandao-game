@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: black;
+}
+
+header {
+    background-color: #27900D;
+    color:#e8f807;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    border-radius: 8px;
+}
+.instrucoes {
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+ul {
+    padding:0;
+}
+ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+#grid-container {
+    position: relative; /* Adicione esta linha para tornar o posicionamento absoluto relativo ao grid-container */
+    display: grid;
+    grid-template-columns: repeat(20, 1.25rem);
+    grid-template-rows: repeat(20, 1.25rem);
+    gap: 1px;
+    margin: 1rem auto;
+    background-color: #27900D;
+    border: 1px solid #27900D;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%; /* Centralize verticalmente */
+    left: 50%; /* Centralize horizontalmente */
+    transform: translate(-50%, -50%);
+}
+.cell {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #27900D;
+    border: 1px solid #27900D;
+    border-radius: 1px;
+}
+
+.cell.alive {
+    background-image: url(./xandao.png);
+    background-size: cover;
+    border-radius: 4px;
+    border: 1px solid #111111;
+}
+
+.cell.food {
+    background-image: url(./x.png);
+    background-size: cover;
+}
+
+#restart-button {
+    width: 18rem;
+    margin: 12px auto;
+    padding: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    border: none;
+    border-radius: 6px;
+}
+
+.placar {
+    background-color: rgb(250, 246, 38);
+    width:18rem;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+#score-container,
+#highscore-container,
+#game-over-score {
+    margin: 5px;
+    font-size: 20px;
+    color: rgb(5, 5, 5);
+
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    #grid-container {
+        width: 100%; /* Define a largura do grid-container em 90% da largura da viewport */
+        height: 30%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* Reduza o número de colunas para caber na tela */
+        grid-template-rows: repeat(12, 1fr); /* Reduza o número de linhas para caber na tela */
+    }
+}

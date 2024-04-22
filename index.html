@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xandão Game</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Xandão x Musk - Jogo clássico">
+    <meta name="keywords" content="xandão, twitter, elon musk, alexandre de moraes, jogo do xandao, snake, jogo, cobra, clássico, divertido, jogo da cobra, jogo da cobrinha, jogo do Nokia, Snake game, jogo snake">
+    <meta name="author" content="Biasiolo">
+    <link rel="icon" type="image/png" href="./xandao.png">
+
+    <!-- Meta tags para redes sociais -->
+    <meta property="og:title" content="Xandao Game">
+    <meta property="og:description" content="Jogue o clássico jogo da cobra!">
+    <meta property="og:image" content="./xandao.png">
+    <meta property="og:url" content="https://example.com/snake-game">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Xandão Game">
+    <meta name="twitter:description" content="Jogue o clássico jogo do Xandão!">
+    <meta name="twitter:image" content="./xandao.png">
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="p-3">
+        <div class="container d-flex justify-content-center align-items-center">
+            <h1 class=" m-0">Xandão Game</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Instruções do Jogo -->
+        <div class="instrucoes">
+            <h2 class="mb-3">Instruções do Jogo</h2>
+            <p>Controle o Xandão movendo-a através do campo. Elimine contas de extremistas para aumentar sua pontuação, mas tenha
+                cuidado para não bater nas bordas da tela ou na própria cauda!</p>
+            <ul>
+                <li><i class="bi bi-arrows-move"></i> Use as setas para mover o Xandão</li>
+                <li><i class="bi bi-shift"></i> Shift: Pressione para iniciar ou pausar o jogo</li>
+            </ul>
+        </div>
+
+        <div id="grid-container">
+            <div id="game-over" class="hidden">
+                <img src="./game-over.gif" alt="Game Over" />
+                <div id="game-over-score"></div>
+                <div id="game-over-hscore"></div>
+            </div>
+        </div>
+
+        <div class="placar">
+            <div id="score-container">Score: <span id="score">0</span></div>
+            <div id="highscore-container">High Score: <span id="highscore">0</span></div>
+        </div>
+
+        <button id="restart-button" class="btn btn-primary">Restart</button>
+    </main>
+
+    <!-- Bootstrap JS (opcional, se você precisar de funcionalidades do Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Seu script personalizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>
